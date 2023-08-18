@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soundboard</title>
+</head>
+<body>
+{% for sound in sounds %}
+    {{ sound.name[:-4] }}
+    <br>
+    <audio controls muted>
+        <source src="{{ sound.url }}" type="audio/mp3">
+    </audio>
+    <br>
+{% endfor %}
+</body>
+</html>
