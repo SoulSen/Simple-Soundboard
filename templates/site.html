@@ -5,9 +5,11 @@
     <title>Soundboard</title>
 </head>
 <body>
+<h1>Soundboard</h1>
+<h3>By default, all the sounds are muted so unmute them</h3>
+<br>
 {% for sound in sounds %}
-    {{ sound.name[:-4] }}
-    <br>
+    <h3>{{ sound.name[:-4] }}</h3>
     <audio controls muted>
         <source src="{{ sound.url }}" type="audio/mp3">
     </audio>

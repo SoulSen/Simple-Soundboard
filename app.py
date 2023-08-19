@@ -8,7 +8,7 @@ app = Flask(__name__)
 class Sound:
     def __init__(self, filename):
         self.name = filename
-        self.url = url_for('static', filename=filename)
+        self.url = url_for('static', filename=f'sounds/{filename}')
 
 
 @app.route('/')
